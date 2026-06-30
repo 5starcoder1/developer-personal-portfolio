@@ -22,24 +22,26 @@ loader.style.display = "none";
 // ==========================
 // MOBILE MENU
 // ==========================
-
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
-if(menuBtn){
+if(menuBtn && nav){
 
-menuBtn.addEventListener("click", () => {
+  menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("active");
 
-nav.classList.toggle("active");
-
-menuBtn.innerHTML =
-nav.classList.contains("active")
-? "✕"
-: "☰";
-
-});
+    menuBtn.innerHTML =
+      nav.classList.contains("active")
+      ? "✕"
+      : "☰";
+  });
 
 }
+
+
+
+
+
 
 // ==========================
 // TYPING EFFECT
